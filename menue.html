@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Augenärzte am Weidenbaumsweg - Übersicht</title>
+</head>
+<body> 
+
+<!-- Menue Seite -->
+<div data-role="page" id="menue" >
+
+    <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false" > 
+    	<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Zur Startseite</a>
+    	<h1>Hauptmenü</h1>
+    </div>
+     
+     
+       <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="c" id="vendors">
+       	<li data-role="list-divider" >Leistungen</li>
+          <li id="vendor-cailean">
+          <a href="allgemein.html" data-transition="slide" >
+          <h3>Allgemein</h3>
+          <img src="bilder/gericht1.png" alt="Allgemein" />
+          <p>Leistungen, Zertifikat</p>
+          </a>
+          </li>
+          
+          <li id="vendor-eilionoir">
+           <a href="kinder.html" data-transition="slide" >
+          <h3>Kinder</h3>
+          <img src="bilder/gericht55.png" alt="Kinder" />
+          <p>Augenvorsorge f. Kinder, Sehschule</p>    
+          </a>
+          </li>
+          
+          <li id="vendor-keir">
+          <a href="netzhaut.html" data-transition="slide" >
+          <h3>Netzhaut</h3>
+          <img src="bilder/gericht3.png" alt="Netzhautuntersuchung" />
+          <p>Netzhautuntersuchung, optomap</p> 
+          </a>
+          </li>
+     	<li data-role="list-divider" >Praxis Infos</li>
+          <li id="vendor-cailean2">
+          <a href="praxisteam.html" data-transition="slide" >
+          <h3>Praxis Team</h3>
+          <img src="bilder/gericht44.png" alt="Praxis Team" />
+          <p>Sprechen Sie uns an</p>
+          </a>
+          </li>
+          
+          <li id="vendor-eilionoir2">
+           <a href="lage.html" data-transition="slide" >
+          <h3>Lage</h3>
+          <img src="bilder/bahnhof_thumbnail.png" alt="Lage" />
+          <p>Hier finden Sie uns</p>    
+          </a>
+          </li>
+          
+          <li id="vendor-keir2">
+          <a href="aktuell.html" data-transition="slide" >
+          <h3>Aktuell</h3>
+          <img src="bilder/gericht7.png" alt="Aktuell" />
+          <p>Aktuelle News aus der Praxis</p> 
+          </a>
+          </li>
+          <li data-role="list-divider" ></li>
+        </ul>
+     
+		
+	<div data-role="footer" data-id="footernav" data-tap-toggle="false" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="b">
+			<ul>
+				<li><a href="menue.html" data-icon="menue" data-transition="fade" class="ui-btn-active">MENÜ</a></li>				
+                <li><a href="anfahrt.html" data-icon="anfahrt" data-transition="fade">ANFAHRT</a></li>
+				<li><a href="kontakt.html" data-icon="kontakt" data-transition="fade">EMAIL</a></li>
+			</ul>
+		</div><!-- /navbar -->       
+    </div><!-- /footer -->
+    
+    
+<script type="text/javascript">
+/*
+$('#menue').on("pageshow", function() {
+
+	$('#gerichteliste').empty();
+
+	$.getJSON('gerichte.json', function(data) {
+		$.each(data.gerichte, function(i,item){
+  			$('<li><a href="gericht-detail.html" data-transition="slide" onClick="javascript:sessionStorage.gericht=\''+item.name+'\';"><img src="bilder/'+item.bild+'" /><h3>' + item.name + '</h3>' + '<p>' + item.untertitel + '</p></a></li>').appendTo('#gerichteliste');
+		});
+		$('#gerichteliste').listview('refresh');
+	});
+});
+*/
+</script>
+ 
+</div><!-- /page -->
+
+</body>
+</html>

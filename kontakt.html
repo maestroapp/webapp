@@ -1,0 +1,125 @@
+<html>
+<head>
+	<title>Augenärzte am Weidenbaumsweg - Kontakt</title>
+</head>
+<body>
+
+<!-- Kontakt Seite -->
+<div data-role="page" id="kontakt">
+	
+	<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false"> 
+    	<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Zur Startseite</a>
+    	<h1>Email-Termin</h1>
+    </div>
+	
+	<div data-role="content" id="kontakt-inhalt">
+    	    
+   		<form id="kontaktformular">
+   			<div data-role="fieldcontain">
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name" value="" />
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="email">E-Mail:</label>
+				<input type="email" name="email" id="email" value="" />
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="telefon">Telefon:</label>
+				<input type="tel" name="telefon" id="telefon" value="" />
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="artanfrage">Art der Anfrage:</label>
+				<select name="artanfrage" id="artanfrage">
+ 					<option value="Termin bei Altrogge">Termin bei J.Altrogge</option>
+  					<option value="Termin bei Bourgund">Termin bei K.Bourgund</option>
+					<option value="Anderes">Anderes</option>
+				</select>
+			</div>
+			
+			<div data-role="fieldcontain">
+				<label for="name">Nachricht:</label>
+				<textarea name="anfrage" id="anfrage" value=""></textarea>
+			</div>
+			
+			<button type="submit" data-theme="b" data-icon="arrow-r" id="submitform">Abschicken</button>
+
+   		</form>
+   		    	    
+	</div><!-- div content -->
+		  
+		  
+	<div data-role="footer" data-id="footernav" data-tap-toggle="false" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="b">
+			<ul>
+				<li><a href="menue.html" data-icon="menue" data-transition="fade">MENÜ</a></li>
+				<li><a href="anfahrt.html" data-icon="anfahrt" data-transition="fade" >ANFAHRT</a></li>
+				<li><a href="kontakt.html" data-icon="kontakt" data-transition="fade" class="ui-btn-active">EMAIL</a></li>
+			</ul>
+		</div><!-- /navbar -->       
+    </div><!-- /footer -->
+    
+    
+<script type="text/javascript">
+
+//Formdaten an PHP-Datei senden
+	$("form#kontaktformular").submit(function() {
+	// we want to store the values from the form input box, then send via ajax below
+	var name = $('#name').attr('value');
+	var email = $('#email').attr('value');
+	var telefon = $('#telefon').attr('value');
+	var artanfrage = $('#artanfrage').attr('value');
+	var anfrage  = $('#anfrage').attr('value');
+		
+		$.ajax({
+			type: "get",
+			url: "submitform.php",
+			data: "name="+ name +"&email="+ email+"&telefon="+ telefon+"&artanfrage="+ artanfrage+"&anfrage="+ anfrage,
+			success: function(){
+				$.mobile.changePage("kontakt-erfolgreich.html", { transition: "flip"} );
+				//alert('test');
+			}
+		});
+	return false;
+	});
+
+			
+</script>
+
+    		  
+</div><!-- /page -->
+
+
+
+
+<!-- Formular erfolgreich abgesendet -->
+<div data-role="page" id="kontaktsuccess">
+	
+	<div data-role="content" id="kontakt-success-inhalt">
+    	
+    	    <h3>Vielen Dank für Ihre Anfrage!</h3>
+   		   		    	    
+	</div><!-- div content -->
+		  
+		  
+	<div data-role="footer" data-id="footernav" data-tap-toggle="false" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="b">
+			<ul>
+				<li><a href="menue.html" data-icon="menue" data-transition="fade">MENÜ</a></li>
+				<li><a href="anfahrt.html" data-icon="anfahrt" data-transition="fade" >ANFAHRT</a></li>
+				<li><a href="kontakt.html" data-icon="kontakt" data-transition="fade" class="ui-btn-active">EMAIL</a></li>
+			</ul>
+		</div><!-- /navbar -->       
+    </div><!-- /footer -->
+    
+
+    		  
+</div><!-- /page -->
+
+
+
+
+</body>
+</html>

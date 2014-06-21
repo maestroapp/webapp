@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Augenärzte am Weidenbaumsweg - Home</title>
+    
+  	<link rel="stylesheet" href="themes/heitererhering.min.css" />
+    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+	
+	<script src="js/jquery.ui.map.full.min.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Gentium+Basic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noticia+Text' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles/styles.css" />
+	
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="apple-touch-icon-precomposed" href="bilder/icon-ipad.png" sizes="72x72" />
+	<link rel="apple-touch-icon-precomposed" href="bilder/icon-iphone-retina.png" sizes="114x114" />
+	<link rel="apple-touch-icon-precomposed" href="bilder/icon-ipad-retina.png" sizes="144x144" />
+	<link rel="apple-touch-icon-precomposed" href="bilder/icon-iphone.png" />
+
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>      
+        <script type="text/javascript">
+			google.load("maps", "3", {'other_params':'sensor=true'});
+		</script>
+
+</head>
+<body> 
+
+<!-- Startseite Seite -->
+<div data-role="page" id="startseite">
+                <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+                <a href="index.html" data-role="button" data-icon="star" data-iconpos="notext">Home</a>
+                <h1>Willkommen</h1>
+                </div>
+    
+                <div data-role="content" id="titelbild">
+                
+                  <img src="bilder/titel_bild2.jpg" class="schatten" />
+                      
+	            </div><!-- div content -->
+              
+               <!-- div content  <div data-role="header" data-theme="b" data-tap-toggle="false">  -->
+                            <!-- Liste der Gerichte -->         
+                          <!-- <h6></h6> --> 
+                 <!--</div> -->
+              
+              	<div data-role="content">
+                    <!-- Liste der Gerichte -->         
+                    <ul id="gerichteliste" data-role="listview">
+                        <!-- Hier werden die JSON Daten hineingeladen -->         
+                    </ul>
+	            </div><!-- div content -->
+              
+   
+            <div data-role="controlgroup"  >
+                <a href="#blog" 
+                    data-role="button"
+                    data-icon="vs_blog"
+                    data-theme="b"
+                >040 73598952</a>
+                <a href="#videos" 
+                    data-role="button"
+                    data-icon="vs_video"
+                >Videos</a>
+                <a href="#photos" 
+                    data-role="button"
+                    data-icon="vs_photo"
+                >Photos</a>
+                <a href="#tweets" 
+                    data-role="button"
+                    data-icon="vs_twitter"
+                >Tweets</a>
+            </div><!-- links -->
+
+           
+
+            <div data-role="footer" data-id="footernav" data-tap-toggle="false" data-position="fixed" data-theme="b">
+                <div data-role="navbar" data-theme="b">
+                    <ul>
+                        <li><a href="menue.html" data-icon="menue" data-transition="fade">MENÜ</a></li>				<li><a href="anfahrt.html" data-icon="anfahrt" data-transition="fade">ANFAHRT</a></li>
+                            <li><a href="kontakt.html" data-icon="kontakt" data-transition="fade">KONTAKT</a></li>
+                    </ul>
+                </div><!-- /navbar   -->     
+            </div><!-- /footer -->
+      
+      
+<script type="text/javascript">
+$('#startseite').on("pageshow", function() {
+
+	$('#gerichteliste').empty();
+
+	$.getJSON('gerichte.json', function(data) {
+		$.each(data.gerichte, function(i,item){
+  			$('<li><a href="gericht-detail.html" data-transition="slide" onClick="javascript:sessionStorage.gericht=\''+item.name+'\';"><img src="bilder/'+item.bild+'" /><h3>' + item.name + '</h3>' + '<p>' + item.untertitel + '</p></a></li>').appendTo('#gerichteliste');
+		});
+		$('#gerichteliste').listview('refresh');
+	});
+});
+</script>
+      
+      
+            
+</div><!-- /page -->
+</body>
+</html>

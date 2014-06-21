@@ -1,0 +1,261 @@
+[data-role=page] {
+background-image: url(http://subtlepatterns.com/patterns/blu_stripes.png);
+}
+
+[data-role=header] {
+	
+font-family: 'Noto Sans', sans-serif;
+color: rgba(255, 255, 255, 1); 
+font-weight: 400;
+ font-size:0,8em;
+line-height:1,4em;
+text-align:center;
+
+	}
+	
+.nix_u{
+
+text-decoration:none; 
+color: rgba(255, 255, 255, 1); 
+line-height:1,2em;
+text-align:center;
+	
+	}
+	
+[data-role=header] a:link , a:visited , a:active  {
+color: rgba(255, 255, 255, 1); 
+text-decoration:none; 
+color:#FFFFFF; 
+
+	}
+	
+		
+[data-role=header]  a:hover, a:focus {
+color: rgba(255, 255, 255, 1); 
+text-decoration:underline; 
+color:#FFFFFF; 
+
+	}
+
+
+.schatten {
+width:100%;
+height:auto;
+padding:0;
+padding-bottom:0;
+
+}
+
+ 	 
+ #gericht-inhalt p{
+padding-left:20px;
+padding-right:20px;
+
+	 }
+ #kontakt-inhalt {
+padding-left:10px;
+padding-right:10px;
+
+	 }
+
+[data-role=content] p {
+padding-left:10px;
+padding-right:10px;
+ font-size:1em;
+
+}
+
+[data-role=content] {
+padding:0px;
+
+}
+
+[data-role=content] img {
+padding:0px;
+}
+
+[data-role=controlgroup] {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.ui-icon-vs_video {
+	background-image: url("../bilder/app-icon-menue-highres.png");
+		background-size: 18px 18px;
+}
+
+.ui-icon-vs_photo {
+	background-image: url("../images/icon_photo.png");
+		background-size: 18px 18px;
+}
+
+.ui-icon-vs_blog {
+	background-image: url("../images/icon_blog.png");
+		background-size: 18px 18px;
+}
+
+.ui-icon-vs_twitter {
+	background-image: url("../bilder/app-icon-kontakt-highres.png");
+	background-size: 18px 18px;
+}
+	
+#vendors .ui-li .ui-btn-inner a.ui-link-inherit {
+	padding-top:8px; 
+	padding-bottom:0; 
+	min-height:68px
+
+}
+
+[data-role=content] h1 {
+
+font-family: 'Gentium Basic', serif;
+font-weight: bold;
+color:#173b84;
+font-size:2em;
+line-height:1,2em;
+text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+text-align:center;
+}
+
+ [data-role=content] h3, [data-role=collapsible-set] h3 , [data-role=collapsible] h3, {
+
+font-family: 'Gentium Basic', serif;
+color:#173b84;
+font-size:0,8em;
+line-height:1,4em;
+text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+text-align:center;
+}
+
+[data-role=content] p, [data-role=content] li {
+
+font-family: 'Noto Sans', sans-serif;
+font-weight: 400;
+font-size 0,8em;
+  line-height:1,4em;
+}
+
+
+
+[data-role=collapsible-set] {
+width:100%;
+}
+
+
+
+[data-role=listview] img {
+height:100%;
+width:auto;
+}
+
+[data-role=listview] h3 {
+
+padding-left:30px;
+font-size:1,2em;
+}
+
+[data-role=listview] p {
+padding-left:30px;
+color:#000000;
+font-size:0,4em;
+}
+
+
+#anfahrt-inhalt {
+padding:0px;
+}
+
+
+/* ####### Navigationsleiste  ######## */
+
+.ui-icon-menue {
+	background-image: url("../bilder/app-icon-menue-highres.png");
+	background-size: 18px 18px;
+}
+
+.ui-icon-telefon {
+	background-image: url("../bilder/app-icon-tel-highres.png");
+	background-size: 18px 18px;
+}
+.ui-icon-anfahrt {
+	background-image: url("../bilder/app-icon-anfahrt-highres.png");
+	background-size: 18px 18px;
+}
+.ui-icon-kontakt {
+	background-image: url("../bilder/app-icon-kontakt-highres.png");
+	background-size: 18px 18px;
+}
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px dashed ;
+	border-color: #ccc;
+    margin: 1em 0; padding: 0; }
+	/*
+	.ui-collapsible.ui-collapsible-collapsed .ui-collapsible-heading .ui-icon-plus,
+    .ui-icon-arrow-r { background-position: -108px 0; }
+    .ui-icon-arrow-l { background-position: -144px 0; }
+    .ui-icon-arrow-u { background-position: -180px 0; }
+.ui-collapsible .ui-collapsible-heading .ui-icon-minus,
+.ui-icon-arrow-d { background-position: -216px 0; }
+*/
+#tri  {
+background-image: url("../bilder/app-icon-menue-highres.png");
+	background-size: 12px 12px;
+  height: 2.8em;
+  font-family: 'Gentium Basic', serif;
+
+color:#173b84;
+font-size:0,4em;
+line-height:1,4em;
+text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+
+}
+
+#titelbild  {
+padding-bottom:0;
+
+}
+
+
+
+#trijkl ul {
+  list-style-type: none;
+}
+#trijkl  {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  height: 1.1em;
+  width:  94%;
+  background-color: #fff;
+  margin: 3%;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: .6em 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+
+	.ui-icon-vs_video {
+		background-image: url("/images/icon_video_hr.png");
+		background-size:18px 18px;
+	}
+	
+	.vs_photo {
+		background-image: url("/images/icon_photo_hr.png");
+		background-size:18px 18px;
+	}
+	
+	.ui-icon-vs_blog {
+		background-image: url("/images/icon_blog_hr.png");
+		background-size:18px 18px;
+	}
+	
+	.ui-icon-vs_twitter {
+		background-image: url("/images/icon_twitter_hr.png");
+		background-size:18px 18px;
+	}
+
+}
+

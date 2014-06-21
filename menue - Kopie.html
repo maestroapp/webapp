@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Augenärzte am Weidenbaumsweg - Übersicht</title>
+</head>
+<body> 
+
+<!-- Menue Seite -->
+<div data-role="page" id="menue" >
+
+    <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false" > 
+    	<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Zur Startseite</a>
+    	<h1>Übersicht</h1>
+    </div>
+     
+	<div data-role="content">
+		<!-- Liste der Gerichte -->         
+		<ul id="gerichteliste" data-role="listview">
+       		<!-- Hier werden die JSON Daten hineingeladen -->         
+		</ul>
+	</div><!-- div content -->
+		
+	<div data-role="footer" data-id="footernav" data-tap-toggle="false" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="b">
+			<ul>
+				<li><a href="menue.html" data-icon="menue" data-transition="fade" class="ui-btn-active">MENÜ</a></li>				<li><a href="anfahrt.html" data-icon="anfahrt" data-transition="fade">ANFAHRT</a></li>
+				<li><a href="kontakt.html" data-icon="kontakt" data-transition="fade">KONTAKT</a></li>
+			</ul>
+		</div><!-- /navbar -->       
+    </div><!-- /footer -->
+    
+    
+<script type="text/javascript">
+$('#menue').on("pageshow", function() {
+
+	$('#gerichteliste').empty();
+
+	$.getJSON('gerichte.json', function(data) {
+		$.each(data.gerichte, function(i,item){
+  			$('<li><a href="gericht-detail.html" data-transition="slide" onClick="javascript:sessionStorage.gericht=\''+item.name+'\';"><img src="bilder/'+item.bild+'" /><h3>' + item.name + '</h3>' + '<p>' + item.untertitel + '</p></a></li>').appendTo('#gerichteliste');
+		});
+		$('#gerichteliste').listview('refresh');
+	});
+});
+</script>
+ 
+</div><!-- /page -->
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Augenärzte am Weidenbaumsweg - Anfahrt</title>
+</head>
+<body>
+
+<!-- Menue Seite -->
+<div data-role="page" id="anfahrt">
+
+    <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false"> 
+    	<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext">ZUR STARTSEITE</a>
+    	<h1>Anfahrt</h1>
+    </div>
+	
+	<div data-role="content" id="anfahrt-inhalt">
+    	    
+    	    <div id="karte-container"></div>
+    	    
+	</div><!-- div content -->
+		  
+		  
+	<div data-role="footer" data-id="footernav" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="b">
+			<ul>
+				<li><a href="menue.html" data-icon="menue" data-transition="fade">MENÜ</a></li>				
+                <li><a href="anfahrt.html" data-icon="anfahrt" data-transition="fade" class="ui-btn-active">ANFAHRT</a></li>
+				<li><a href="kontakt.html" data-icon="kontakt" data-transition="fade">EMAIL</a></li>
+			</ul>
+		</div><!-- /navbar -->       
+    </div><!-- /footer -->
+    
+<script type="text/javascript">
+$('#anfahrt').on("pageshow", function() {
+    		
+	var positionsAusgabe = function(position){
+	    var longpos = position.coords.longitude;
+	    var latpos = position.coords.latitude;
+	    
+	    $('#karte-container').height($(window).height());					
+	    
+	    $('#karte-container').gmap(
+	    	'displayDirections', {
+	    		'origin': new google.maps.LatLng(latpos,longpos), 
+	    		'destination': "Weidenbaumsweg 6, Hamburg", 
+	    		'travelMode': google.maps.DirectionsTravelMode.DRIVING 
+	    	}, 
+	    	{
+	    	'disableDefaultUI': true
+	    	}, function(success, response) {
+	    		if ( success ) {
+	    			return new google.maps.LatLng(latpos, longpos);							
+	    		} else {
+	    			alert('error');
+	    			$('#karte-container').gmap('getService', 'DirectionsRenderer').setMap(null);
+	    		}
+	    		
+	    		
+	    	});
+	    				
+	};
+	navigator.geolocation.getCurrentPosition(positionsAusgabe);
+
+});
+
+</script>
+    		  
+</div><!-- /page -->
+
+</body>
+</html>

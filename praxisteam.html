@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>Augenärzte am Weidenbaumsweg</title>
+</head>
+<body>
+
+<!-- Menue Seite  -->
+<div data-role="page" id="gericht-einzeln" >
+	<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <a href="menue.html" data-role="button" data-icon="arrow-l" data-iconpos="notext">Zum Hauptmenü</a>
+    <h1>Praxis Team</h1></div>
+	
+     <div data-role="content" id="titelbild">
+                
+                  <img src="bilder/team_500_333_24.png" class="schatten" />
+                      
+	 </div><!-- div content -->
+    
+	<div data-role="content" id="gericht-inhalt">
+    	<!-- Hier wird dynamisch das einzelne Gericht reingeladen -->   
+        
+    <p>
+      Unser kompetentes und eingespieltes Team kümmert sich um den reibungslosen Ablauf der Praxis. 
+   </p>
+   <p>
+   Bitte wenden Sie sich bei augenheilkundlichen, terminlichen oder organisatorischen Fragen an uns. 
+   </p>
+   <p>
+   Außerdem haben wir jederzeit ein offenes Ohr für Ihre Sorgen und Fragen.
+   </p>
+   <p>
+   <strong>Sprechen Sie uns an!   </strong><br>
+   </p>
+    
+   	</div><!-- div content -->
+          
+     
+	<div data-role="footer" data-id="footernav" data-tap-toggle="false" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="b">
+			<ul>
+				<li><a href="menue.html" data-icon="menue" data-transition="fade" >MENÜ</a></li>				                
+                <li><a href="anfahrt.html" data-icon="anfahrt" data-transition="fade">ANFAHRT</a></li>
+				<li><a href="kontakt.html" data-icon="kontakt" data-transition="fade">EMAIL</a></li>
+			</ul>
+		</div><!-- /navbar -->       
+    </div><!-- /footer -->
+    
+    
+<script type="text/javascript">
+/*
+$('#gericht-einzeln').on("pageshow", function() {
+	$('#gericht-inhalt').empty();
+	var gericht = sessionStorage.gericht;
+	$.getJSON('gerichte2.json', function(data) {
+		$.each(data.gerichte, function(i,item){
+			if(item.name == gericht){
+				$('<img src="bilder/'+item.bild+'" class="schatten" /><h1>' + item.name + '</h1>' + '<p>' + item.untertitel + '</p>').appendTo('#gericht-inhalt');
+	    	}
+	  	});
+	});
+});
+*/
+</script>
+    		  
+</div><!-- /page -->
+
+</body>
+</html>

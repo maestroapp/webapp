@@ -1,0 +1,37 @@
+{
+ 	"gerichte": [
+ 	
+	{
+ 		"name": "Unsere Praxis",
+		"bild": "gericht1.png",
+		"untertitel": "In unserer Praxis bieten wir Ihnen das gesamte Behandlungs- und Leistungsspektrum der modernen Augenheilkunde an. <p> Unsere Praxis ist die erste Augenarztpraxis in Hamburg  Bergedorf die nach <strong>DIN EN ISO 9001:2008 TÜV</strong> zertifiziert ist. Unsere Praxis ist zugelassen für alle Kassen. </p><p>Ihre Termine für die Untersuchung können Sie sowohl telefonisch als auch per Kontaktformular mit uns vereinbaren.</p>"	
+	},
+	
+	{
+ 		"name": "Ärzte Team",
+		"bild": "gericht2.png",
+		"untertitel": "<p>Die Untersuchungen, Behandlungen und Beratungen erfolgen in unseren neuen, großzügigen Räumen auf dem neuesten diagnostischen und therapeutischen Stand der Augenheilkunde, der Wissenschaft und der technischen Ausrüstung.</p> <p>Wir sind im höchsten Maße an individuell-menschlicher Zuwendung und Betreuung interessiert und sind immer persönlich für Sie da.</p>"	
+	},
+	
+	{
+ 		"name": "Praxis Team",
+		"bild": "gericht4.png",
+		"untertitel": "<p>Unser kompetentes und eingespieltes Team kümmert sich um den reibungslosen Ablauf der Praxis.</p><p> Bitte wenden Sie sich bei augenheilkundlichen, terminlichen oder organisatorischen Fragen an uns. Außerdem haben wir jederzeit ein offenes Ohr für Ihre Sorgen und Fragen. <br> Sprechen Sie uns an!</p>"	
+	},
+	
+	{
+ 		"name": "Hautnetzuntersuchung",
+		"bild": "gericht3.png",
+		"untertitel": "<p>Nur die frühzeitige Erkennung von Augenkrankheiten ermöglicht eine erfolgreiche Behandlung. Vor diesem Hintergrund empfehlen wir Ihnen eine regelmäßige Netzhautuntersuchung: die <strong>optomap</strong> Augen-Gesundheits-Vorsorge.</p><p> Das <strong>optomap</strong>-System ermöglicht Ihrem Augenarzt einen ultraweiten Blick auf Ihre Netzhaut. </p><p> Termine unter <strong>040/72 180 72</strong> als auch per Kontaktformular<p>"	
+	},
+	
+	{
+ 		"name": "Kinder-Augenvorsorge",
+		"bild": "gericht5.png",
+		"untertitel": "<p>Kinder- und Augenärzte empfehlen , augenärztliche Untersuchungen für Kinder so früh wie möglich durchzuführen. Vor allem, wenn sichtbare Veränderungen an den Augen des Kleinkindes auftreten. Im Durchschnitt hat fast jedes fünfte Kind im Alter von 4 Jahren eine unerkannte Sehstörung.</p><p> Ihre Termine für die Untersuchung können Sie sowohl telefonisch als auch per Kontaktformular mit uns vereinbaren.</p> "	
+	}
+	
+	]
+
+}
+	

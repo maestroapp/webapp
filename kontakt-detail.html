@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Augenärzte am Weidenbaumsweg</title>
+</head>
+<body>
+
+<!-- Menue Seite  -->
+<div data-role="page" id="gericht-einzeln" >
+	<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <a href="index.html" data-role="button" data-icon="arrow-l" data-iconpos="notext">Zur Startseite</a>
+    <h1>Kontaktdaten</h1></div>
+	
+     <div data-role="content" id="titelbild">
+                
+                  <img src="bilder/empfang_mit_schrift_24.png" class="schatten" />
+                      
+	 </div><!-- div content -->
+    
+	<div data-role="content" id="gericht-inhalt">
+    	<!-- Hier wird dynamisch das einzelne Gericht reingeladen -->   
+         <p> 
+        <strong>Augenärzte am Weidenbaumsweg</strong><br>
+        <strong>Weidenbaumsweg 6 </strong><br>
+        <strong>21029 Hamburg </strong><br>
+        </p> <p> 
+        <strong>Tel.: 040 / 72 180 72 </strong><br>
+        <strong>Fax.: 040 / 72 128 42</strong><br>
+        <strong>Email: info(at)augen-abc.de </strong>
+        </p> <p>
+        <strong>http://www.augen-abc.de</strong><br>
+        <strong>http://facebook.com/augenabc</strong><br>
+        </p>
+        <p>Vereinbaren Sie einen Termin per Telefon </p> 
+        <h1><a href="tel:040-7218072">040/7218072</a></h1>
+        <p>oder per Email </p>
+        <h1><a href="mailto:info@augen-abc.de">info@augen-abc.de</a></h1>
+        <p>Für allgemeine Fragen oder Terminabsprachen können Sie gerne unser Kontaktformular nutzen.
+       </p>
+        <p>    </p>       
+   	</div><!-- div content -->
+          
+	<div data-role="footer" data-id="footernav" data-tap-toggle="false" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="b">
+			<ul>
+				<li><a href="menue.html" data-icon="menue" data-transition="fade" >MENÜ</a></li>				                
+                <li><a href="anfahrt.html" data-icon="anfahrt" data-transition="fade">ANFAHRT</a></li>
+				<li><a href="kontakt.html" data-icon="kontakt" data-transition="fade">EMAIL</a></li>
+			</ul>
+		</div><!-- /navbar -->       
+    </div><!-- /footer -->
+    
+    
+<script type="text/javascript">
+/*
+$('#gericht-einzeln').on("pageshow", function() {
+	$('#gericht-inhalt').empty();
+	var gericht = sessionStorage.gericht;
+	$.getJSON('gerichte2.json', function(data) {
+		$.each(data.gerichte, function(i,item){
+			if(item.name == gericht){
+				$('<img src="bilder/'+item.bild+'" class="schatten" /><h1>' + item.name + '</h1>' + '<p>' + item.untertitel + '</p>').appendTo('#gericht-inhalt');
+	    	}
+	  	});
+	});
+});
+*/
+</script>
+    		  
+</div><!-- /page -->
+
+</body>
+</html>

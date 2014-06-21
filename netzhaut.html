@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>Augenärzte am Weidenbaumsweg</title>
+</head>
+<body>
+
+<!-- Menue Seite  -->
+<div data-role="page" id="gericht-einzeln" >
+	<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+    <a href="menue.html" data-role="button" data-icon="arrow-l" data-iconpos="notext">Zum Hauptmenü</a>
+    <h1>Netzhautuntersuchung</h1></div>
+	
+     <div data-role="content" id="titelbild">
+                
+                  <img src="bilder/gericht3.png" class="schatten" />
+                      
+	</div><!-- div content -->
+    
+	<div data-role="content" id="gericht-inhalt">
+    	<!-- Hier wird dynamisch das einzelne Gericht reingeladen -->   
+        
+        <p>
+          Viele Augenkrankheiten äußern sich lange nicht durch Schmerzen oder Sehbeeinträchtigungen. Doch nur die frühzeitige Erkennung ermöglicht eine erfolgreiche Behandlung. 
+          
+       </p><p>
+          Vor diesem Hintergrund empfehlen wir Ihnen eine regelmäßige Netzhautuntersuchung: <br> <strong> die optomap Augen-Gesundheits-Vorsorge.</strong>
+
+     </p><p>
+          Das optomap-System ermöglicht Ihrem Augenarzt einen ultraweiten Blick auf Ihre Netzhaut.
+   </p><p>
+
+<strong>Warum optomap:</strong><br>
+
+   <ul>
+     <li>optomap ist ein digitales Ultra-Weitwinkel-Netzhaut-Bildgebungssystem</li>
+     <li>Es erfasst in einer einzigen Aufnahme mehr als 80% der Netzhaut in einem Panoramabild</li>
+     <li>Die Untersuchung geht schnell und ist vollkommen schmerzfrei </li>
+     <li>Die Untersuchung eignet sich für Patienten jeden Alters, besonders auch für kleinere Kinder und Senioren</li>
+     <li>Sie können sofort danach wieder Auto fahren, an Ihren Arbeitsplatz zurückkehren</li>
+     <li>Die Aufnahmen liegen dem Arzt sofort als digitales Foto zur Besprechung mit Ihnen vor – sogar als 3D Aufnahme</li>
+  </ul>
+        </p>
+                    
+   	</div><!-- div content -->
+          
+
+		  
+          
+	<div data-role="footer" data-id="footernav" data-tap-toggle="false" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-theme="b">
+			<ul>
+				<li><a href="menue.html" data-icon="menue" data-transition="fade" >MENÜ</a></li>				                
+                <li><a href="anfahrt.html" data-icon="anfahrt" data-transition="fade">ANFAHRT</a></li>
+				<li><a href="kontakt.html" data-icon="kontakt" data-transition="fade">EMAIL</a></li>
+			</ul>
+		</div><!-- /navbar -->       
+    </div><!-- /footer -->
+    
+    
+<script type="text/javascript">
+/*
+$('#gericht-einzeln').on("pageshow", function() {
+	$('#gericht-inhalt').empty();
+	var gericht = sessionStorage.gericht;
+	$.getJSON('gerichte2.json', function(data) {
+		$.each(data.gerichte, function(i,item){
+			if(item.name == gericht){
+				$('<img src="bilder/'+item.bild+'" class="schatten" /><h1>' + item.name + '</h1>' + '<p>' + item.untertitel + '</p>').appendTo('#gericht-inhalt');
+	    	}
+	  	});
+	});
+});
+*/
+</script>
+    		  
+</div><!-- /page -->
+
+</body>
+</html>

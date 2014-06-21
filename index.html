@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ <link href='http://fonts.googleapis.com/css?family=Gentium+Basic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noticia+Text' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
+    <title>Augenärzte am Weidenbaumsweg - Home</title>
+    
+  	<link rel="stylesheet" href="themes/heitererhering.min.css" />
+    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+	
+	<script src="js/jquery.ui.map.full.min.js" type="text/javascript"></script>
+   
+	<link rel="stylesheet" href="styles/styles.css" />
+	
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="apple-touch-icon-precomposed" href="bilder/icon-ipad.png" sizes="72x72" />
+	<link rel="apple-touch-icon-precomposed" href="bilder/icon-iphone-retina.png" sizes="114x114" />
+	<link rel="apple-touch-icon-precomposed" href="bilder/icon-ipad-retina.png" sizes="144x144" />
+	<link rel="apple-touch-icon-precomposed" href="bilder/icon-iphone.png" />
+
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>      
+        <script type="text/javascript">
+			google.load("maps", "3", {'other_params':'sensor=true'});
+		</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39088564-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body> 
+
+<!-- Startseite Seite -->
+<div data-role="page" id="startseite">
+                <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+                <a href="tel:040-7218072"  data-role="button" data-icon="telefon" data-iconpos="notext">Phone</a>
+                <h1><a href="tel:040-7218072" class="nix_u">040/7218072</a></h1>
+                
+                </div>
+ 
+                <div data-role="content" id="titelbild">
+                
+                  <img src="bilder/titel_bild2.jpg" class="schatten" />
+                      
+	            </div><!-- div content -->
+              
+               <!-- div content  <div data-role="header" data-theme="b" data-tap-toggle="false">  -->
+                            <!-- Liste der Gerichte -->         
+                          <!-- <h6></h6> --> 
+                 <!--</div> -->
+              
+                   <!--	<div data-role="content"> -->
+                    <!-- Liste der Gerichte -->         
+                       <!--  <ul id="gerichteliste" data-role="listview"> -->
+                        <!-- Hier werden die JSON Daten hineingeladen -->         
+                    <!--     </ul> -->
+	              <!--   </div><!-- div content -->
+
+
+         <ul data-role="listview" data-inset="true" id="vendors" data-divider-theme="c">
+         <li data-role="list-divider" ></li>
+          <li id="vendor-cailean">
+          <a href="gericht-detail.html" data-transition="slide" >
+          <h3>Praxis</h3>
+          <img src="bilder/gericht1.png" alt="Praxis" />
+          <p>Anschrift, Sprechzeiten</p>
+          </a>
+          </li>
+          
+          
+          <li id="vendor-eilionoir">
+           <a href="aerzte-detail.html" data-transition="slide" >
+          <h3>Ärzte</h3>
+          <img src="bilder/gericht777.png" alt="Ärzte" />
+          <p>Ärzte Team, Behandlungen</p>    
+          </a>
+          </li>
+          
+          <li id="vendor-keir">
+          <a href="kontakt-detail.html" data-transition="slide" >
+          <h3>Kontakt</h3>
+          <img src="bilder/gericht7.png" alt="Kontakt" />
+          <p>Telefon, Email, Fax</p> 
+          </a>
+          </li>
+       <li data-role="list-divider" ></li>
+        </ul>
+
+
+           
+
+            <div data-role="footer" data-id="footernav" data-tap-toggle="false" data-position="fixed" data-theme="b">
+                <div data-role="navbar" data-theme="b">
+                    <ul>
+                        <li><a href="menue.html" data-icon="menue" data-transition="fade">MENÜ</a></li>				
+                        <li><a href="anfahrt.html" data-icon="anfahrt" data-transition="fade">ANFAHRT</a></li>
+                        <li><a href="kontakt.html" data-icon="kontakt" data-transition="fade">EMAIL</a></li>
+                    </ul>
+                </div><!-- /navbar   -->     
+            </div><!-- /footer -->
+      
+      
+<script type="text/javascript">
+/*
+$('#startseite').on("pageshow", function() {
+
+	$('#gerichteliste').empty();
+
+	$.getJSON('gerichte.json', function(data) {
+		$.each(data.gerichte, function(i,item){
+  			$('<li><a href="gericht-detail.html" data-transition="slide" onClick="javascript:sessionStorage.gericht=\''+item.name+'\';"><img src="bilder/'+item.bild+'" /><h3>' + item.name + '</h3>' + '<p>' + item.untertitel + '</p></a></li>').appendTo('#gerichteliste');
+		});
+		$('#gerichteliste').listview('refresh');
+	});
+});
+*/
+</script>
+      
+      
+            
+</div><!-- /page -->
+</body>
+</html>
